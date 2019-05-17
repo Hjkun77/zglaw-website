@@ -1,0 +1,40 @@
+.archive {
+  .inner-container {
+    .archive-thumbnail {
+      margin-bottom: rem(30px);
+      a {
+        display: block;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          transition: 0.6s ease;
+        }
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .archive-content {
+      text-align: left;
+
+      h1 {
+        text-align: left;
+        line-height: rem(40px);
+        margin-bottom: rem(30px);
+      }
+      h5 {
+        font-weight: $font__weight-bold;
+      }
+    }
+    .c-container {
+      @media (min-width: $width-md) {
+        max-width: rem(666px);
+        margin: 0 auto;
+      }
+    }
+  }
+
+}

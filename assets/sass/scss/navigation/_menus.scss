@@ -1,0 +1,210 @@
+.mobile-display {
+  position: relative;
+}
+.navbar-toggler {
+  background: none !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  transform: translateY(-50%);
+  width: rem(48px);
+
+  .icon-bar {
+    transform: rotate(0);
+    background-color: $color__link;
+    width: rem(21px);
+    height: rem(2px);
+    display: block;
+
+    +.icon-bar {
+      margin-top: rem(4px);
+    }
+    .middle-bar {
+      opacity: 1;
+    }
+  }
+  &.menu-active {
+    .icon-bar {
+
+      &.top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      &.middle-bar {
+        opacity: 0;
+      }
+      &.bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+    }
+  }
+}
+/*Top Menu*/
+.main-menu {
+  .menu-main-menu-container {
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+
+      li {
+        padding: rem(0 10px);
+
+        @media (min-width: $width-xl) {
+          padding: rem(0 15px);
+        }
+        a {
+          font-size: rem(14px);
+          padding-bottom: rem(5px);
+          font-weight: $font__weight-medium;
+          transition: none;
+
+          &:hover, &:focus, &:visited {
+            color: $color__black;
+            text-decoration: none;
+
+            &:after {
+              background: $color__link-hover;
+              width: 100%;
+            }
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: rem(2px);
+            width: 0;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+          }
+        }
+        &.current-menu-item {
+          a {
+            color: $color__link;
+            text-decoration: none;
+            border-bottom: rem(2px) solid $color__link-hover;
+
+            &:hover, &:focus, &:visited {
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+.cbp-spmenu {
+  background: $color__background-section;
+  position: fixed;
+  padding: 0 0 15px;
+  margin: 0 !important;
+  overflow: visible !important;
+  display: block;
+  visibility: visible;
+  border-top: 0 none;
+  height: 100% !important;
+  z-index: 100;
+  top: rem(67px);
+
+  @media (min-width: $width-lg) {
+    top: rem(87px);
+  }
+
+
+  a {
+    border: none;
+  }
+
+  &.cbp-spmenu-right {
+    &.cbp-spmenu-open {
+      right: 0;
+    }
+  }
+  &.cbp-spmenu-vertical {
+    width: rem(296px);
+  }
+  &.cbp-spmenu-right {
+    right: rem(-296px);
+
+    &.menu-open {
+      right: 0;
+    }
+  }
+
+  &.collapse {
+    display: block;
+  }
+  .accd-menu {
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    li {
+      a {
+        color: $color__background-body;
+        padding-left: rem(30px);
+        border-bottom: none;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        position: relative;
+        font-weight: $font__weight-medium;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: rem(15px);
+          transform: translateY(-50%);
+        }
+        &:active, &:hover, &:focus {
+          background: $color__link;
+          color: $color__background-body;
+          text-decoration: none;
+        }
+
+        &.active {
+          .fa-angle-down {
+            &:before {
+              content: '\f106';
+            }
+          }
+        }
+      }
+      &.has-children {
+        ul {
+          background: $color__link;
+          padding-left: 0;
+
+          li {
+            a {
+              padding-left: rem(55px);
+
+              span {
+                left: rem(40px);
+              }
+            }
+          }
+        }
+      }
+      &.current-menu-item {
+        a {
+          background: $color__link;
+          color: $color__background-body;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .cbp-spmenu-inner {
+    position: relative;
+  }
+}

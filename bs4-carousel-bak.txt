@@ -1,0 +1,56 @@
+  <?php
+    while(have_posts()) {
+      the_post();
+
+    if(is_front_page()) {
+	    $args = array(
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'feedback',
+        'post_status' => 'publish'
+      );
+        $post_object = new WP_Query($args);
+        if($post_object->have_posts()) {
+  ?>
+
+    <div class="home-feedback" >
+      <div class="feedback-content">
+
+        <div id="feedback-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <ol class="carousel-indicators">
+              <?php
+                $indicatorCounter = 0;
+                while($post_object->have_posts()) {
+                $post_object->the_post();
+                if($post_object->post_count > 1) {
+              ?>
+
+                  <li data-target="#feedback-carousel" data-slide-to="<?php echo $indicatorCounter?>" class="<?php echo $indicatorCounter == 0 ? 'active' : '';?>"></li>
+
+              <?php } $indicatorCounter++; } ?>
+            </ol>
+
+            <?php
+              $i = 0;
+              while($post_object->have_posts()) {
+                $post_object->the_post();
+                $image = wp_get_attachment_url( get_post_thumbnail_id($post_object->post_id) );
+              ?>
+              <div class="carousel-item <?php echo $i == 0 ? 'active' : ''?>" style="background-image: url('<?php echo $image;?>')">
+                <div class="overlay"></div>
+                <div class="container">
+                 <div class="carousel-content">
+	                 <?php the_content(); ?>
+                   <div class="separator"></div>
+                   <small>Client feedback, <?php the_title(); ?></small>
+                 </div>
+                </div>
+              </div>
+            <?php $i++; } wp_reset_postdata(); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php } } }?>

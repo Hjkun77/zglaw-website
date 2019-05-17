@@ -1,0 +1,25 @@
+/*------Variables, Mixins and Function-------*/
+@import "scss/variables/variables";
+@import "scss/mixin/mixin";
+@import "scss/function/rem";
+
+/*------Typography-----------------*/
+@import "scss/typography/typography";
+
+@import "scss/global";
+
+/*------Elements-----------------*/
+@import "scss/elements/elements";
+
+/*------Forms-----------------*/
+@import "scss/forms/forms";
+
+/*------Partials-----------------*/
+@import "scss/partials/partials";
+
+/*------Navigation-----------------*/
+@import "scss/navigation/navigation";
+
+
+/*------Pages-----------------*/
+@import "scss/pages/pages";

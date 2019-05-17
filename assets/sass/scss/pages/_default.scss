@@ -1,0 +1,25 @@
+.section-default {
+  .section-pad {
+    padding: rem(30px 30px 50px);
+  }
+}
+.post-cat-page {
+  .section-blocks {
+    .block-item {
+      .card-image {
+        a {
+          min-height: rem(202px);
+          height: auto;
+          img {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

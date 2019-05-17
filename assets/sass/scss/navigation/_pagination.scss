@@ -1,0 +1,17 @@
+.pagination {
+  .page-item {
+    .page-link {
+      border: rem(1px) solid $color__anchor--text;
+      color: $color__anchor--text;
+      padding: rem(10px 15px);
+      font-size: rem(14px);
+      transition: all 1s ease-in-out;
+
+      &:hover, &:focus, &.current {
+        background: $color__black;
+        color: $color__background-body;
+        border: rem(1px) solid $color__black;
+      }
+    }
+  }
+}

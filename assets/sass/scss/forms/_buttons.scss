@@ -1,0 +1,22 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $color__anchor--text;
+  height: rem(47px);
+  line-height: rem(47px);
+  text-align: center;
+  font-size: rem(12px);
+  font-weight: $font__weight-medium;
+  border-radius: 0;
+  padding: rem(0 24px);
+  text-transform: uppercase;
+  width: 100%;
+  color: $color__background-body;
+  letter-spacing: 0.03em;
+
+  &:hover, &:focus {
+    background: $color__black;
+    color: $color__background-body;
+  }
+}

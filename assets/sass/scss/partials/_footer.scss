@@ -1,0 +1,79 @@
+.prefoot-section {
+  margin-top: rem(15px);
+
+  .section-pad {
+    padding: rem(25px 0);
+  }
+  .content {
+    @media (min-width: $width-lg) {
+      max-width: rem(666px);
+      margin: 0 auto;
+    }
+  }
+}
+.site-footer {
+  padding: rem(60px 0);
+
+  .foot-content {
+    @media (min-width: $width-lg) {
+      max-width: rem(800px);
+      margin: 0 auto;
+    }
+  }
+  .sitemap {
+    @media (min-width: $width-lg) {
+      padding-left: rem(30px);
+    }
+  }
+  h4 {
+    color: $color__background-body;
+    font-size: rem(24px);
+    line-height: rem(39px);
+  }
+  p {
+    font-size: rem(14px);
+    line-height: rem(27px);
+    color: $color__background-body;
+  }
+  .footer-menu {
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-child {
+        a {
+          border: none;
+          padding-left: 0;
+          margin-left: 0;
+        }
+      }
+      a {
+        color: $color__background-body;
+        font-size: rem(12px);
+        display: block;
+        border-left: rem(1px) solid $color__background-body;
+        padding-left: rem(10px);
+        margin-left: rem(10px);
+        line-height: rem(12px);
+
+        &:hover, &:focus, &:visited {
+          color: $color__background-body;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .copyright {
+    margin-top: rem(10px);
+    margin-bottom: rem(15px);
+    font-size: rem(14px);
+    line-height: rem(14px);
+  }
+  .dev-team {
+    margin-bottom: rem(5px);
+    font-size: rem(14px);
+  }
+}

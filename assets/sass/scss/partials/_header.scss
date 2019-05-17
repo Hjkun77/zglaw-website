@@ -1,0 +1,47 @@
+.sticky {
+  .site-header {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.12), 0 4px 4px 0 rgba(0,0,0,.24);
+    padding: rem(10px 0);
+  }
+}
+.site-header  {
+  padding: rem(10px 0);
+  transition: all .35s ease-in-out;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.12), 0 4px 4px 0 rgba(0,0,0,.24);
+
+  @media (min-width: $width-lg) {
+    padding: rem(20px 0);
+  }
+
+  &.fixed-top {
+    background: $color__background-body;
+  }
+
+  .container {
+    position: relative;
+  }
+  .site-branding {
+    a {
+      width: rem(220px);
+
+      @media (min-width: $width-md) {
+        width: rem(200px);
+      }
+      @media (min-width: $width-xl) {
+        width: rem(350px);
+      }
+
+    }
+  }
+  .main-menu {
+    display: none;
+    @media (min-width: $width-lg) {
+      display: block;
+    }
+  }
+  .mobile-display {
+    @media (min-width: $width-lg) {
+      display: none;
+    }
+  }
+}

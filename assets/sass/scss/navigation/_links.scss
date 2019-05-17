@@ -1,0 +1,48 @@
+a {
+  color: $color__link;
+  transition: all 1s ease-in-out;
+  text-decoration: none;
+
+  &:visited {
+    color: $color__black;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  &.btn {
+    height: rem(41px);
+    line-height: rem(41px);
+    text-align: center;
+    font-size: rem(10px);
+    font-weight: $font__weight-medium;
+    border-radius: 0;
+    padding: rem(0 24px);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.btn-bordered {
+      border: rem(1px) solid $color__anchor--text;
+      color: $color__anchor--text;
+    }
+    &.btn-ghost {
+      background: $color__background-body;
+    }
+
+    &:hover, &:focus {
+      background: $color__anchor--text;
+      color: $color__black;
+      text-decoration: none;
+    }
+  }
+}
